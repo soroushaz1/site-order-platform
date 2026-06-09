@@ -105,7 +105,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-400/25 to-cyan-300/20 blur-2xl" />
 
-            <div className="relative rounded-[2rem] border border-white/70 bg-white/70 p-5 shadow-2xl shadow-blue-200/60 backdrop-blur-xl">
+            <div className="relative rounded-[2rem] border border-white/70 bg-white/75 p-5 shadow-2xl shadow-blue-200/60 backdrop-blur-xl">
               <div className="rounded-[1.5rem] bg-slate-950 p-5 text-white">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -115,49 +115,56 @@ export default function Home() {
                   </div>
 
                   <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-slate-300">
-                    پنل مدیریت لیدها
+                    پیش‌نمایش فروشگاه آنلاین
                   </span>
                 </div>
 
                 <div className="mt-8 rounded-[1.5rem] bg-white p-6 text-slate-950 shadow-xl">
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-sm font-black text-blue-600">درخواست جدید</p>
+                    <p className="text-sm font-black text-blue-600">
+                      فروشگاه آماده برای کسب‌وکار شما
+                    </p>
+
                     <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-700">
-                      آماده بررسی
+                      موبایل‌پسند
                     </span>
                   </div>
 
                   <h3 className="mt-4 text-2xl font-black leading-10">
-                    فروشگاه آنلاین برای پیج اینستاگرام
+                    تبدیل پیج اینستاگرام به سایت فروشگاهی
                   </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
+                    مشتری محصول را می‌بیند، سفارش ثبت می‌کند و شما سفارش‌ها را منظم‌تر مدیریت می‌کنید.
+                  </p>
 
                   <div className="mt-5 grid gap-3 text-sm font-bold text-slate-600">
                     <div className="flex justify-between rounded-2xl bg-slate-50 px-4 py-3">
-                      <span>تعداد محصولات</span>
-                      <span className="text-slate-950">۳۰ عدد</span>
-                    </div>
-
-                    <div className="flex justify-between rounded-2xl bg-slate-50 px-4 py-3">
-                      <span>درگاه پرداخت</span>
+                      <span>صفحه محصول</span>
                       <span className="text-slate-950">دارد</span>
                     </div>
 
                     <div className="flex justify-between rounded-2xl bg-slate-50 px-4 py-3">
-                      <span>نوع پروژه</span>
-                      <span className="text-slate-950">فروشگاهی</span>
+                      <span>فرم ثبت سفارش</span>
+                      <span className="text-slate-950">دارد</span>
+                    </div>
+
+                    <div className="flex justify-between rounded-2xl bg-slate-50 px-4 py-3">
+                      <span>اتصال واتساپ</span>
+                      <span className="text-slate-950">اختیاری</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-4 grid grid-cols-2 gap-4">
                   <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5">
-                    <p className="text-sm font-bold text-slate-300">لیدهای ماه</p>
-                    <p className="mt-2 text-4xl font-black">۲۴</p>
+                    <p className="text-sm font-bold text-slate-300">مناسب برای</p>
+                    <p className="mt-2 text-2xl font-black">فروش آنلاین</p>
                   </div>
 
                   <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5">
-                    <p className="text-sm font-bold text-slate-300">پروژه فعال</p>
-                    <p className="mt-2 text-4xl font-black">۵</p>
+                    <p className="text-sm font-bold text-slate-300">شروع پروژه</p>
+                    <p className="mt-2 text-2xl font-black">با فرم درخواست</p>
                   </div>
                 </div>
               </div>
@@ -238,11 +245,10 @@ export default function Home() {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`rounded-[2rem] border p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${
-                index === 1
+              className={`rounded-[2rem] border p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl ${index === 1
                   ? "border-blue-200 bg-blue-600 text-white shadow-blue-200"
                   : "border-white/80 bg-white/70 text-slate-950 backdrop-blur"
-              }`}
+                }`}
             >
               <h3 className="text-2xl font-black">{plan.name}</h3>
               <p className={`mt-2 font-black ${index === 1 ? "text-blue-100" : "text-blue-600"}`}>
@@ -253,9 +259,8 @@ export default function Home() {
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
-                    className={`text-sm font-bold ${
-                      index === 1 ? "text-blue-50" : "text-slate-600"
-                    }`}
+                    className={`text-sm font-bold ${index === 1 ? "text-blue-50" : "text-slate-600"
+                      }`}
                   >
                     ✓ {feature}
                   </li>
